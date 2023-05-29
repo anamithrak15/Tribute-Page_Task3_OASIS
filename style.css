@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #212121;
+    --background-color: #111;
+    --font: sans-serif;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #FFBFA9 80%, #85586F 20%);
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(rgba(125, 117, 122, 0.65), rgba(45, 41, 43, 0.56)), url("chawla.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.main {
+    padding-left: 30px;
+    height: 600px;
+
+    margin-left: 3rem;
+    display: flex;
+    font-size: 20px;
+
+    font-weight: 800;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 9rem;
+    letter-spacing: 1px;
+    padding-left: 50px;
+    padding-top: 270px;
+    -webjit-text-stroke: 1px white;
+    color: transparent;
+    background: url('s.jpg');
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: backText 10s linear infinite alternate;
+    text-align: center;
+}
+
+@keyframes backText {
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.swiper {
+    padding-top: 400px;
+    width: 400px;
+    height: 900px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    flex: 1;
+    text-align: left;
+}
+
+.about h2 {
+
+    font-size: 3rem;
+    text-align: center;
+
+}
+
+.mySlides {
+    display: none;
+    height: 500px;
+    border-radius: 40px;
+
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main p {
+    padding-right: 70px;
+    padding-left: 70px;
+    color: #4360bf;
+    font-size: 25px;
+    flex: 1;
+}
+
+.text {
+    flex: 1;
+}
+
+.main img {
+    width: 30rem
+}
+
+
+.history {
+    background-color: #f7f6d99c;
+
+}
+
+
+
+.child {
+    height: 550px;
+    display: flex;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.history h2 {
+    padding-top: 40px;
+    font-size: 3rem;
+    text-align: left;
+    padding-left: 70px;
+}
+
+.para p {
+    flex: 1;
+    font-size: 27px;
+    padding-left: 90px;
+    padding-right: 150px;
+}
+
+.imge {
+    flex: 1;
+    padding-right: 190px;
+}
+
+.history img {
+    width: 20rem;
+}
+
+.edu {
+    height: 600px;
+
+}
+
+.edu h2 {
+    font-size: 3rem;
+    padding-left: 60px;
+}
+
+.timeline {
+    text-align: center;
+    margin: 20px auto;
+    padding-left: 450px;
+}
+
+.card {
+    position: relative;
+    max-width: 500px;
+
+}
+
+.card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+}
+
+.card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid rgb(65, 108, 158);
+}
+
+.card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+}
+
+@media only screen and (max-width: 400px) {
+    .card:nth-child(odd)::before {
+        top: -5px;
+        bottom: -5px;
+    }
+}
+
+.card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+.card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+
+.card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+
+.card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+
+.info {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background: #302f2f;
+    color: white;
+    border-radius: 10px;
+    padding: 40px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.title {
+    color: rgb(149, 183, 238);
+    position: relative;
+
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid rgb(94, 139, 159);
+}
+
+.card:nth-child(even)>.info>.title {
+    text-align: right;
+}
+
+.card:nth-child(odd)>.info>.title::before {
+    left: -261px;
+}
+
+.card:nth-child(even)>.info>.title::before {
+    right: -261px;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    margin-top: 20rem;
+}
+
+.navigation-auto div {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
